@@ -6,6 +6,12 @@ two types of packages:
 - executable: generate a file that we can run (package **main** makes executable package -> generate project binaries) -> must have func called name (entrypoint of the program)
 - reusable: code used as helpers
 ___
+### Philosophy of Go:
+- Go is built around the Unix Philosophy that says:
+	- write programs that do on thing and do it well
+	- write programs to work together
+	- write  programs to handle text streams because that is a universal interface.
+___
 ### Variables:
 - statically types
 
@@ -257,3 +263,20 @@ ___
 - file ending must be in `_test.go`
 - run with `go test`
 - always do the cleanup
+___
+### Struct tags:
+ - provide metadata and annotations
+ - acquired through reflection?
+ - Struct tags usually provide instructions on how a struct field is encoded to or decoded from a format.
+____
+
+### Context in go:
+passed down between layers
+control
+best practice -> make it first arg
+store requestId, or traceId
+What is a context?
+
+- `context.TODO()` | `context.Background()`
+- `context.WithTimeout()`: 
+- https://www.youtube.com/watch?v=h2RdcrMLQAo&pp=ygUYdW5kZXJzdGFuZCBjcG10ZXh0IGluIGdv -> Understand contexts
